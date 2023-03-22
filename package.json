@@ -1,0 +1,29 @@
+{
+  "name": "panda-wdg",
+  "version": "1.0.0",
+  "description": "2021.11 - 2021.04 web-designer[HTML-Project]",
+  "main": "index.js",
+  "scripts": {
+    "serve": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m914201/panda-wdg.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/m914201/panda-wdg/issues"
+  },
+  "homepage": "https://github.com/m914201/panda-wdg#readme",
+  "dependencies": {
+    "0g": "0.0.9",
+    "express": "^4.18.2",
+    "firebase-tools": "^11.25.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
