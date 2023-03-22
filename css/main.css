@@ -1,0 +1,586 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&family=Oswald:wght@200&display=swap');
+
+
+.sec1 {
+    background-color: black;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+.sec1.on {
+    transform: rotateX(90deg);
+}
+video {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background-color: black;
+    transition: 0.3s;
+}
+video.on {
+    transform: perspective(1000px) scale(1) translate3d(0, 42vh, 0) rotate3d(1, 0, 0, 72deg);
+}
+nav {
+    width: 20%;
+    height: 15%;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10%;
+    display: flex;
+}
+nav>p {
+    position: absolute;
+    width: 50%;
+    color: white;
+    top: 50%;
+    transform: translateY(-100%);
+    left: 0;
+    cursor: pointer;
+    z-index: 100;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 1.5rem;
+}
+nav>p::after {
+    content: "";
+    background-color: white;
+    width: 120%;
+    height: 2px;
+    bottom: -5px;
+    left: 20px;
+    position: absolute;
+}
+article {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.circle {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: auto;
+    cursor: pointer;
+}
+.gnb {
+    width: 90%;
+    height: auto;
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gnb>a {
+    color: white;
+    width: calc(100%/3);
+    font-size: 2.5rem;
+    z-index: 1000;
+    transform: perspective(1000px) scale(1) translate3d(0, 0, 0) rotate3d(1, 0, 0, 110deg);
+    transition: .3s;
+    opacity: 0;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 20px;
+    text-decoration: none;
+}
+/* 텍스트 color 애니메이션 */
+.gnb>a:hover span {
+    animation: txtE .5s;
+}
+@keyframes txtE {
+    10% {
+        opacity: 0.3;
+        transform: scale(0);
+    }
+
+    40% {
+        transform: translate(20px, 0) scale(1);
+        color: skyblue;
+    }
+
+    70% {
+        transform: translate(0) scale(1.2);
+        color: blue;
+    }
+
+    100% {
+        transform: translate(20px, 0) scale(1);
+        color: skyblue;
+    }
+}
+.gnb>a>span:nth-child(1) {animation-delay: .05s;}
+.gnb>a>span:nth-child(2) {animation-delay: .1s;}
+.gnb>a>span:nth-child(3) {animation-delay: .15s;}
+.gnb>a>span:nth-child(4) {animation-delay: .2s;}
+.gnb>a>span:nth-child(5) {animation-delay: .25s;}
+.gnb>a>span:nth-child(6) {animation-delay: .3s;}
+.gnb>a>span:nth-child(7) {animation-delay: .35s;}
+.gnb>a>span:nth-child(8) {animation-delay: .4s;}
+.gnb>a>span:nth-child(9) {animation-delay: .45s;}
+.gnb>a:nth-child(3)>span:nth-child(1) {animation-delay: 0s;}
+.gnb>a:nth-child(3)>span:nth-child(2) {animation-delay: 0.04s;}
+.gnb>a:nth-child(3)>span:nth-child(3) {animation-delay: .08s;}
+.gnb>a:nth-child(3)>span:nth-child(4) {animation-delay: 0.12s;}
+.gnb>a:nth-child(3)>span:nth-child(5) {animation-delay: 0.16s;}
+.gnb>a:nth-child(3)>span:nth-child(6) {animation-delay: 0.2s;}
+.gnb>a:nth-child(3)>span:nth-child(7) {animation-delay: 0.24s;}
+.gnb>a:nth-child(3)>span:nth-child(8) {animation-delay: 0.28s;}
+.gnb>a:nth-child(3)>span:nth-child(9) {animation-delay: 0.32s;}
+.gnb>a.on {
+    transform: perspective(0) scale(1) translate3d(0, 0, 0) rotate3d(0, 0, 0, 180deg);
+    opacity: 1;
+}
+.title-box {
+    z-index: 1000;
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) rotate3d(1, 0, 0, 250deg);
+}
+.wave {
+    opacity: .4;
+    position: absolute;
+    border: 2px solid #999;
+    width: 300px;
+    height: 300px;
+    transform-origin: 50% 48%;
+    border-radius: 43%;
+    animation: drift 3000ms both linear;
+    animation-delay: 1.4s;
+    left: 25%;
+}
+.wave.-three {
+    animation: drift 5000ms both linear;
+    animation-delay: 1.4s;
+}
+.wave.-two {
+    animation: drift 7000ms both linear;
+    animation-delay: 1.4s;
+    opacity: .1;
+    border: 3px solid #999;
+}
+/* 텍스트 color 애니메이션 효과 */
+.web_text {
+    font-size: 2rem;
+    width: 40%;
+    height: auto;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    transition: .3s;
+}
+#typing {
+    position: absolute;
+    color: white;
+    font-size: 3rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s;
+    width: 100%;
+    text-align: center;
+}
+.web_text.on,
+#typing.on {
+    transform: translate(-50%, -50%) perspective(1000px) scale(1) translate3d(0, 0, 0) rotate3d(1, 0, 0, 110deg);
+    opacity: 0;
+}
+
+.web_text>p {
+    position: relative;
+    animation: textani 1s both;
+    opacity: 0;
+}
+.web_text p:nth-of-type(1) {animation-delay: 2.8s;}
+.web_text p:nth-of-type(2) {animation-delay: 2.7s;}
+.web_text p:nth-of-type(3) {animation-delay: 2.6s;}
+.web_text p:nth-of-type(4) {animation-delay: 2.5s;}
+.web_text p:nth-of-type(5) {animation-delay: 2.4s;}
+.web_text p:nth-of-type(6) {animation-delay: 2.3s;}
+.web_text p:nth-of-type(7) {animation-delay: 2.2s;}
+.web_text p:nth-of-type(8) {animation-delay: 2.1s;}
+.web_text p:nth-of-type(9) {animation-delay: 2s;}
+.web_text p:nth-of-type(10) {animation-delay: 1.9s;}
+.web_text p:nth-of-type(11) {animation-delay: 1.8s;}
+.web_text p:nth-of-type(12) {animation-delay: 1.7s;}
+.web_text p:nth-of-type(13) {animation-delay: 1.7s;}
+.web_text p:nth-of-type(14) {animation-delay: 1.8s;}
+.web_text p:nth-of-type(15) {animation-delay: 1.9s;}
+.web_text p:nth-of-type(16) {animation-delay: 2s;}
+.web_text p:nth-of-type(17) {animation-delay: 2.1s;}
+.web_text p:nth-of-type(18) {animation-delay: 2.2s;}
+.web_text p:nth-of-type(19) {animation-delay: 2.3s;}
+.web_text p:nth-of-type(20) {animation-delay: 2.4s;}
+.web_text p:nth-of-type(21) {animation-delay: 2.5s;}
+.web_text p:nth-of-type(22) {animation-delay: 2.6s;}
+.web_text p:nth-of-type(23) {animation-delay: 2.7s;}
+.web_text p:nth-of-type(24) {animation-delay: 2.8s;}
+/* 텍스트 애니메이션 효과 */
+
+@keyframes textani {
+    50% {
+        top: -0.2rem;
+        transform: scale(1.5);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes drift {
+    from {
+        transform: rotate(0deg) scale(0, 0);
+        opacity: 1;
+    }
+    to {
+        transform: rotate(360deg) scale(2, 2);
+        opacity: 0;
+    }
+}
+
+.waterDrop {
+    border: 3px solid #999;
+    border-radius: 50%;
+    background-color: #999;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    animation: drop 1s both ease-in;
+    animation-delay: .7s;
+}
+.waterDrop.on,
+.title-box.on {
+    opacity: 0;
+}
+@keyframes drop {
+    50% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: .5;
+    }
+
+    100% {
+        top: 65%;
+        opacity: 0;
+    }
+}
+.circle>img {
+    animation: rotation 10s infinite linear;
+}
+.circle>img.on {
+    animation: rotationX 10s infinite linear;
+}
+.circle>img {
+    width: 100%;
+}
+.circle::after,
+.circle::before {
+    content: "";
+    background-color: white;
+    height: 10%;
+    width: 3px;
+    position: absolute;
+    z-index: 1000;
+    left: 40%;
+    border-radius: 30%;
+}
+.circle::after {
+    transform: rotate(45deg);
+    top: 50%;
+    animation: arrow1 .5s ease-in both;
+}
+.circle.on::after {
+    animation: aniX1 .5s ease-in both;
+    transition: .5s;
+}
+.circle::before {
+    transform: rotate(-45deg);
+    top: 44%;
+    animation: arrow2 .5s ease-in both;
+}
+.circle.on::before {
+    animation: aniX2 .5s ease-in both;
+    transition: .5s;
+}
+@keyframes rotation {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotationX {
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes aniX1 {
+    70% {
+        top: 55%;
+        left: 40%;
+    }
+    100% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        height: 20%;
+    }
+}
+@keyframes aniX2 {
+    70% {
+        top: 40%;
+        left: 40%;
+    }
+    100% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        height: 20%;
+    }
+}
+
+@keyframes arrow1 {
+    0% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+        height: 20%;
+    }
+    100% {
+        transform: rotate(45deg);
+        top: 50%;
+        animation: arrow1 .5s ease-in both;
+    }
+}
+@keyframes arrow2 {
+    0% {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        height: 20%;
+    }
+    100% {
+        transform: rotate(-45deg);
+        top: 44%;
+    }
+}
+.circle:hover>img {
+    animation-play-state: paused;
+}
+/* 반응형 */
+@media(max-width:1850px) {
+    .gnb>a {
+        letter-spacing: 10px;
+    }
+}
+@media(max-width:1300px) {
+    html {
+        font-size: 70%;
+    }
+    nav>p::after {
+        width: 110%;
+    }
+}
+
+@media(max-width:1100px) {
+    .gnb>a {
+        letter-spacing: 0;
+    }
+}
+@media(max-width:980px) {
+    .web_text {
+        width: 60%;
+    }
+    nav {
+        width: 30%;
+    }
+    .wave {
+        width: 130px;
+        height: 130px;
+    }
+}
+@media(max-width:700px) {
+    html {
+        font-size: 60%;
+    }
+    .web_text {
+        width: 75%;
+    }
+}
+@media(max-width:600px) {
+    video {
+        height: auto;
+    }
+    #typing {
+        top: 60%;
+    }
+    .web_text {
+        width: 100%;
+        top: 70%;
+    }
+    .title-box {
+        top: 55%;
+    }
+    .wave {
+        width: 90px;
+        height: 90px;
+    }
+    nav {
+        width: 40%;
+        bottom: 5%;
+    }
+    .gnb {
+        width: 90%;
+        height: auto;
+        display: flex;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @keyframes drop {
+        50% {
+            opacity: 1;
+        }
+        80% {
+            opacity: .5;
+        }
+        100% {
+            top: 80%;
+            opacity: 0;
+        }
+    }
+}
+@media(max-width:480px) {
+    .wave {
+        width: 80px;
+        height: 80px;
+    }
+    .gnb {
+        width: 100%;
+        height: 50%;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+        flex-direction: column;
+    }
+    .gnb>a {
+        width: 100%;
+        height: calc(100% / 3);
+        letter-spacing: 10px;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    nav>p::after {
+        width: 110%;
+    }
+    nav {
+        width: 60%;
+        bottom: 5%;
+    }
+}
+
+@media(max-width:400px) {
+    html {
+        font-size: 50%;
+    }
+    .web_text {
+        width: 100%;
+    }
+    .wave {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media(max-width:290px) {
+    html {
+        font-size: 40%;
+    }
+
+    nav>p::after {
+        width: 100%;
+    }
+}
+@-webkit-keyframes stroke_offset {
+    100%,
+    25% {
+        stroke-dasharray: 0 250;
+        stroke-opacity: 1
+    }
+    50%,
+    75% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: .75
+    }
+    55%,
+    70% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: 0
+    }
+}
+
+@keyframes stroke_offset {
+    100%,
+    25% {
+        stroke-dasharray: 0 250;
+        stroke-opacity: 1
+    }
+    50%,
+    75% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: .75
+    }
+    55%,
+    70% {
+        stroke-dasharray: 250 0;
+        stroke-opacity: 0
+    }
+}
+@-webkit-keyframes fill_offset {
+    100%,
+    25%,
+    35%,
+    90% {
+        fill-opacity: 0
+    }
+    50%,
+    70% {
+        fill-opacity: 1
+    }
+}
+@keyframes fill_offset {
+    100%,
+    25%,
+    35%,
+    90% {
+        fill-opacity: 0
+    }
+    50%,
+    70% {
+        fill-opacity: 1
+    }
+}
+#fade-text {
+    font-family: 'Alex Brush', cursive;
+    font-size: 4em
+}
