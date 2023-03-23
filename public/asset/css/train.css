@@ -56,7 +56,7 @@ nav {
 .logo {
     width: 160px;
     height: 60px;
-    background-image: url(../train_img/심볼-완성-하얀색.png);
+    background-image: url(../img/train_img/symbol-w.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -68,7 +68,7 @@ nav {
 }
 
 .blacklg {
-    background-image: url(../train_img/심볼-완성.png);
+    background-image: url(../img/train_img/symbol.png);
     opacity: 0;
     transition: 2s;
 }
@@ -884,7 +884,7 @@ nav {
     bottom: 10%;
     width: 100%;
     height: 15%;
-    background-image: url(../train_img/하단.png);
+    background-image: url(../img/train_img/bottom.png);
     background-position: center;
     background-repeat: no-repeat;
 }

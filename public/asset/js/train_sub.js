@@ -25,7 +25,6 @@ $(function () {
 
     $(function () {
         let hd1 = $('.elementary').height() / 2;
-        console.log(hd1)
         let hd2 = $('.slide>li').height();
         let cnt = 0;
         

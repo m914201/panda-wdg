@@ -3,14 +3,11 @@ $(function () {
     $(elm).each(function (index) {
         $(this).on('mousewheel DOMMouseScroll', function (e) {
             let E = e.originalEvent;
-            console.log(E)
             e.preventDefault();
             let moveTop = $(window).scrollTop();
             let elmSelector = $(elm).eq(index);
             let ht =$(window).height();
-            console.log(elmSelector);
             delta = 0;
-            console.log(ht)
 
             if (event.detail) {
                 delta = event.delta;
@@ -61,7 +58,6 @@ $(function () {
                 $('.blacklg').removeClass('on')
                 
             }
-            console.log(moveTop)
         });
     });
 
@@ -145,13 +141,10 @@ $(function () {
 
     let t = new Date();
     // 현재 시간
-    console.log(new Date)
     let nowYear = t.getFullYear();
     // 현재년도
-    // console.log(nowYear)
     let theYear = (1988);
     // 박물관 개장일
-    // console.log(theYear)
     let diffYear = nowYear - theYear
     // // 개장일로부터 현재까지 몇년
     // console.log(diffYear)
@@ -162,15 +155,11 @@ $(function () {
     // console.log(diffDate)
     let day = Math.ceil(diffDate / (24 * 60 * 60 * 1000)) % 365
     // 개장 후 지금까지 일수
-    console.log(day)
     let hours = Math.floor(diffDate / (60 * 60 * 1000)) % 24
-    console.log(hours)
     // 개장 후 지금까지 시간
     let minutes = Math.floor(diffDate / (60 * 1000)) % 60
-    console.log(minutes)
     // 개장 후 지금까지 분
     let seconds = Math.floor(diffDate / (1000)) % 60
-    console.log(seconds)
     // 개장 후 지금까지 초
     
 
@@ -182,7 +171,6 @@ $(function () {
 
         let t = new Date();
         // 현재 시간
-        console.log(new Date)
         let nowYear = t.getFullYear();
         // 현재년도
         // console.log(nowYear)
@@ -199,15 +187,11 @@ $(function () {
         // console.log(diffDate)
         let day = Math.ceil(diffDate / (24 * 60 * 60 * 1000)) % 365
         // 개장 후 지금까지 일수
-        console.log(day)
         let hours = Math.floor(diffDate / (60 * 60 * 1000)) % 24
-        console.log(hours)
         // 개장 후 지금까지 시간
         let minutes = Math.floor(diffDate / (60 * 1000)) % 60
-        console.log(minutes)
         // 개장 후 지금까지 분
         let seconds = Math.floor(diffDate / (1000)) % 60
-        console.log(seconds)
         // 개장 후 지금까지 초
         if(day>=10){
             day = day;

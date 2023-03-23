@@ -60,8 +60,15 @@ $(function () {
                 delta = event.wheelDelta;
             }
             if (delta < 0) {
+                console.log('delta',delta);
+                console.log('index',index);
                 if ($(elmSelector).next() != undefined) {
+                    console.log('elmSelector.next',$(elmSelector).next());
+                    console.log('elmSelector',elmSelector);
                     moveTop = $(elmSelector).next().offset().top;
+                    if($(elmSelector).next() == elmSelector){
+                        moveTop = $(elmSelector).offset().top;
+                    }
                 }
 
             } else {

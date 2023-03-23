@@ -12,7 +12,7 @@ a {text-decoration: none;}
 header {width: 100%;height: 85px;  z-index: 1000;}
 nav>* {font-family: 'Noto Sans KR', sans-serif;color: black;}
 nav {position: relative;max-width: 1200px;width: 100%;height: 100%;margin: auto;display: flex;}
-.logo {width: 160px;height: 60px;background-image: url(../train_img/심볼-완성.png);background-size: 100%;background-repeat: no-repeat;background-position: center;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);color: transparent;cursor: pointer;}
+.logo {width: 160px;height: 60px;background-image: url(../img/train_img/symbol.png);background-size: 100%;background-repeat: no-repeat;background-position: center;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);color: transparent;cursor: pointer;}
 .menu_con>a{font-size: 14px;width: 90px;height: 25px;text-align: center;position: relative;top: 50%;display: inline-block;color: black;}
 .menu_con>a:hover {color: #999;transition: none;}
 .gnb>button {position: absolute;border: none;background-color: transparent;top: 50%;cursor: pointer;}
@@ -276,7 +276,6 @@ footer>div>span{
     width: calc(100% / 2);
 
      */
-}
 /* 유치부 */
 /* 대회소개 */
 .introduction>span:nth-child(1){
