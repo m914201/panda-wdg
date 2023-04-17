@@ -47,10 +47,10 @@ $(function () {
     $(elm).each(function (index) {
         $(this).on('mousewheel DOMMouseScroll', function (e) {
             let E = e.originalEvent;
-            console.log(E)
+            // console.log(E)
             e.preventDefault();
             let elmSelector = $(elm).eq(index);
-            console.log(elmSelector);
+            // console.log(elmSelector);
             delta = 0;
             // console.log(ht)
 
@@ -60,15 +60,8 @@ $(function () {
                 delta = event.wheelDelta;
             }
             if (delta < 0) {
-                console.log('delta',delta);
-                console.log('index',index);
-                if ($(elmSelector).next() != undefined) {
-                    console.log('elmSelector.next',$(elmSelector).next());
-                    console.log('elmSelector',elmSelector);
+                if ($(elmSelector).next().length !== 0) {
                     moveTop = $(elmSelector).next().offset().top;
-                    if($(elmSelector).next() == elmSelector){
-                        moveTop = $(elmSelector).offset().top;
-                    }
                 }
 
             } else {

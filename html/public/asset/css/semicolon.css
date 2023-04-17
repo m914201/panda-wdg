@@ -170,8 +170,8 @@ header::before {
 /*---------------------------- 메뉴 텍스트 hover시 보여지는 이미지----------------------- */
 #menu_img.about {background-image: url("../semicolon_img/abouthover.png");}
 #menu_img.product{background-image: url("../semicolon_img/producthover.png");}
-#menu_img.glasses{background-image: url("../semicolon_img/glasshover일릭-안경2(500-800.png");}
-#menu_img.sunglasses {background-image: url("../semicolon_img/sunglasseshover비보-선글라스2(500-800).png");}
+#menu_img.glasses{background-image: url("../semicolon_img/ellicGlasses_hover.png");}
+#menu_img.sunglasses {background-image: url("../semicolon_img/biboSunglasses_hover.png");}
 #menu_img.acc {background-image: url("../semicolon_img/ACChover.png");}
 #menu_img.magazine{background-image: url("../semicolon_img/magazinehover.png");}
 /* ------------------------------------------------------------------------------------------- */

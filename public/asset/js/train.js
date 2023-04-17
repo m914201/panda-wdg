@@ -1,3 +1,10 @@
+window.onload = function () {
+    var target = document.getElementsByTagName('video');
+    console.log(target);
+    target[0].muted = true;
+    target[1].muted = true;
+    target[2].muted = true;
+};
 $(function () {
     let elm = 'section';
     $(elm).each(function (index) {
@@ -15,7 +22,6 @@ $(function () {
                 delta = event.wheelDelta;
             }
 
-        
 
             if (delta < 0) {
                 if ($(elmSelector).next() != undefined) {
@@ -60,7 +66,11 @@ $(function () {
             }
         });
     });
+    function homzzang() {
 
+        alert("멈춤없이 재생가능");
+      
+    }
     // 섹션4 마우스호버 이벤트
     $('.aa').mouseover(function(){
         $(this).addClass('on')
